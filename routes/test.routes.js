@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 
 const movie = require('../controllers/test.controller');
 
-router.get('/', test.index);
+router.get('/', function(req, res, next) {
+  //res.render('index', { title: 'Express' });
+  res.send("Requisição GET");
+});
 
 module.exports = router;
